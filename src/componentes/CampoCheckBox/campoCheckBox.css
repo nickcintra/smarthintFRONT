@@ -1,0 +1,10 @@
+.campo-checkbox label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.campo-checkbox input{
+    display: block;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,19 @@
+.listaFiltro {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 80px 0;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.13);
+    padding: 10px 14px;
+}
+
+.listaFiltro .coluna {
+    padding: 8px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+.campodate {
+    margin: 24px 0;
+}
+
+.campodate label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.datacampo {
+    background-color: #FFF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.ant-picker-input >input {
+    font-size: 20px !important;
+}
