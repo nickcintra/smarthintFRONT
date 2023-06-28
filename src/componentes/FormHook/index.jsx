@@ -47,8 +47,8 @@ const FormHook = () => {
 
     useEffect(() => {
         if (!isPhysicalPerson) {
-            setValue('genero', ''); // Clear the value of the "genero" field
-            setValue('dataNascimento', ''); // Clear the value of the "dataNascimento" field
+            setValue('genero', ''); 
+            setValue('dataNascimento', '');
         }
     }, [setValue, isPhysicalPerson]);
 

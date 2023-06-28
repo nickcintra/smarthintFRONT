@@ -1,5 +1,5 @@
-.listaFiltro {
-    width: 90%;
+.listaFiltro form{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -11,6 +11,7 @@
 }
 
 .listaFiltro .coluna {
+    height: 100%;
     padding: 8px;
     text-align: left;
     font-weight: 500;

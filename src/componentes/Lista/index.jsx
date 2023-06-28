@@ -19,7 +19,7 @@ const Lista = (props) => {
     const fetchData = async () => {
       try {
         const response = await api.get(
-          `/api/Cliente?pageNumber=${pageNumber+1}&pageSize=${pageSize}`
+          `/api/Cliente?pageNumber=${pageNumber + 1}&pageSize=${pageSize}`
         );
         setData(response.data);
         setTotalPages(response.data.totalPages);
@@ -36,58 +36,60 @@ const Lista = (props) => {
   };
 
   return (
-    <div className="Lista">
+    <>
       <Filtro />
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <CampoCheckBox
-                obrigatorio={false}
-                valor={selecionarTodos}
-                aoAlterado={(valor) => setSelecionarTodos(valor)}
-                emFormulario={true}
-              />
-            </th>
-            <th>Nome/Razão Social</th>
-            <th>E-mail</th>
-            <th>Telefone</th>
-            <th>Data Cadastro</th>
-            <th>Cliente Bloqueado</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.items &&
-            data.items.map((item) => (
-              <tr key={item.id}>
-                <td>
-                  <CampoCheckBox
-                    obrigatorio={false}
-                    valor={selecionarTodos}
-                    aoAlterado={(valor) => setSelecionarTodos(valor)}
-                    emFormulario={true}
-                  />
-                </td>
-                <td>{item.nome}</td>
-                <td>{item.email}</td>
-                <td>{item.telefone}</td>
-                <td>{item.dataCadastro}</td>
-                <td>
-                  <CampoCheckBox
-                    obrigatorio={false}
-                    valor={item.bloqueado}
-                    aoAlterado={() => setClienteBloqueado(item.bloqueado)}
-                    emFormulario={false}
-                  />
-                </td>
-                <td>
-                  <Botao texto="Editar" />
-                </td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
+      <div className="Lista">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <CampoCheckBox
+                  obrigatorio={false}
+                  valor={selecionarTodos}
+                  aoAlterado={(valor) => setSelecionarTodos(valor)}
+                  emFormulario={true}
+                />
+              </th>
+              <th>Nome/Razão Social</th>
+              <th>E-mail</th>
+              <th>Telefone</th>
+              <th>Data Cadastro</th>
+              <th>Cliente Bloqueado</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.items &&
+              data.items.map((item) => (
+                <tr key={item.id}>
+                  <td>
+                    <CampoCheckBox
+                      obrigatorio={false}
+                      valor={selecionarTodos}
+                      aoAlterado={(valor) => setSelecionarTodos(valor)}
+                      emFormulario={true}
+                    />
+                  </td>
+                  <td>{item.nome}</td>
+                  <td>{item.email}</td>
+                  <td>{item.telefone}</td>
+                  <td>{item.dataCadastro}</td>
+                  <td>
+                    <CampoCheckBox
+                      obrigatorio={false}
+                      valor={item.bloqueado}
+                      aoAlterado={() => setClienteBloqueado(item.bloqueado)}
+                      emFormulario={false}
+                    />
+                  </td>
+                  <td>
+                    <Botao texto="Editar" />
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </div>
       <ReactPaginate
         pageCount={totalPages}
         pageRangeDisplayed={5}
@@ -97,7 +99,7 @@ const Lista = (props) => {
         activeClassName={'active'}
         forcePage={pageNumber}
       />
-    </div>
+    </>
   );
 };
 

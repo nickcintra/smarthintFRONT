@@ -5,21 +5,25 @@
     justify-content: center;
 }
 
-.Lista table{
-    width: 90%;
+.Lista table {
+    width: 100%;
     background-color: #F2F2F2;
     border-radius: 20px;
-    padding: 30px 34px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.13);
 }
 
-td {
+.Lista :is(tbody, td, tfoot, th, thead, tr)
+{
+    padding: 30px 34px !important;
+}
+
+.Lista td {
     border-bottom: 1px solid #ddd;
 }
 
-th,
-td {
-    padding: 8px;
+.Lista th,
+.Lista tr,
+.Lista td {
     text-align: left;
     font-weight: 500;
     font-size: 18px;
@@ -29,32 +33,34 @@ td {
     background-color: #e1e1b0
 }
 
+/* PAGINAÇÃO */
 .pagination {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-  }
-  
-  .pagination ul {
+    padding: 40px;
+}
+
+.pagination ul {
     list-style-type: none;
     padding: 0;
     display: flex;
     align-items: center;
-  }
-  
-  .pagination li {
+}
+
+.pagination li {
     margin: 0 5px;
-  }
-  
-  .pagination li a {
+}
+
+.pagination li a {
     text-decoration: none;
     color: #333;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .pagination li.active a {
+}
+
+.pagination li.active a {
     background-color: #333;
     color: #fff;
-  }
+}
