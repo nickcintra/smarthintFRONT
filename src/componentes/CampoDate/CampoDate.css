@@ -5,18 +5,22 @@
 .campodate label {
     display: block;
     margin-bottom: 8px;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .datacampo {
     background-color: #FFF;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.21);
     width: 100%;
     border: none;
-    padding: 15px;
+    padding: 8px;
     box-sizing: border-box;
 }
 
 .ant-picker-input >input {
-    font-size: 20px !important;
+    font-size: 15px !important;
+}
+
+.ant-space{
+    gap: 0px !important;
 }

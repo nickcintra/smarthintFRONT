@@ -19,7 +19,7 @@ const Lista = (props) => {
     const fetchData = async () => {
       try {
         const response = await api.get(
-          `/api/Cliente?pageNumber=${pageNumber + 1}&pageSize=${pageSize}`
+          `/api/Cliente/filtro?pageNumber=${pageNumber + 1}&pageSize=${pageSize}`
         );
         setData(response.data);
         setTotalPages(response.data.totalPages);
@@ -35,9 +35,10 @@ const Lista = (props) => {
     setPageNumber(data.selected);
   };
 
+
   return (
     <>
-      <Filtro />
+      <Filtro setData={setData} setTotalPages={setTotalPages}/>
       <div className="Lista">
         <table>
           <thead>

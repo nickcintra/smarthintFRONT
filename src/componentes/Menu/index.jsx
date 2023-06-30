@@ -8,8 +8,8 @@ const Menu = (props) => {
     return (
         <header>
             <div className='menu'>
-                <a><Link to="/Formulario">Cadastro</Link></a>
-                <a><Link to="/Lista">Lista</Link></a>
+                <Link to="/Formulario">Cadastro</Link>
+                <Link to="/Lista">Lista</Link>
             </div>
         </header>
     )

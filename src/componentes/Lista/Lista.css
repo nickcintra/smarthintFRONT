@@ -12,22 +12,40 @@
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.13);
 }
 
-.Lista :is(tbody, td, tfoot, th, thead, tr)
+.Lista,table :is(thead, tbody, td, th, tr)
 {
     padding: 30px 34px !important;
 }
 
-.Lista td {
+.Lista :is(thead){
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.Lista :is(tbody){
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.Lista,table,thead, tbody :is(td,th,tr)
+{
+    padding: 30px 34px !important;
+}
+
+.Lista :is(td,tr)
+{
     border-bottom: 1px solid #ddd;
 }
 
-.Lista th,
+/* .Lista th,
 .Lista tr,
 .Lista td {
     text-align: left;
     font-weight: 500;
     font-size: 18px;
-}
+} */
 
 .linhaEscura {
     background-color: #e1e1b0

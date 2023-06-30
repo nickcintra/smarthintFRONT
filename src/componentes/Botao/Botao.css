@@ -1,10 +1,35 @@
-.botao{
+.botao {
     border-radius: 10px;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 18px;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 12px;
     border: none;
     cursor: pointer;
     color: white;
     margin-right: 10px;
+}
+
+.botao.excluir {
+    background-color: #FF3B3B;
+}
+
+.botao.editar {
+    background-color: #ffa500;
+}
+
+.botao.visualizar {
+    background-color: #289DFF;
+}
+
+.botao.cadastrar {
+    background-color: #00C6A0;
+}
+
+.botao.cancelar {
+    background-color: #262726;
+}
+
+.botao.limpar-filtro {
+    background-color: #0c3a2d;
+    margin-left: 20px;
 }
